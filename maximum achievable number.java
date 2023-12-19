@@ -1,22 +1,20 @@
-//id-2656//
 
- //Maximum Sum With Exactly K Elements//
+//id-2769//
 
-
+Find the Maximum Achievable Number
 
 class Solution {
-    public int maximizeSum(int[] nums, int k) {
-        int large=0;
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]>large){
-                large = nums[i];
+    public int theMaximumAchievableX(int num, int t) {
+        int x=t;
+        while(t>0){
+            num = num+1;
+            t=t-1;
+            if(t==0){
+                num =num+x;
             }
         }
-        int sum = large;
-        for(int i=k-1;i>0;i--){
-            large++;
-            sum =sum+large;
-        }
-        return sum;
-    }
+        return num;
+    } 
+
 }
+
